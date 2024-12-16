@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+:root {
+    --C: #EEEEEE;
+    --Bg: #393E46;
+    --Ts: #FFD369;
+    --C4: #222831;
+    font-size: calc(1em + 0.5vw);
+}
+
+html, * {
+    box-sizing: border-box;
+    z-index: 1;
+    font-family: 'VT323', monospace;
+}
+
+body {
+    color: var(--C);
+    background-color: var(--Bg);
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    box-sizing: border-box;
+
+}
+
+.title {
+    color: var(--C);
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.container {
+    max-width: 1200px;
+    background-color: var(--C4);
+    padding: 15px;
+    border: 2px solid var(--C);
+    border-radius: 5px;
+    margin: auto;
+    text-align: center;
+}
+
+.flip {
+  transform: rotateX(180deg);
+}
+
+.table {
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    margin-bottom: 15px;
+    padding: 0;
+   
+
+}
+#search, #pageSize {
+  margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 6px;
+    border: 1px solid var(--C);
+    background-color: var(--Bg);
+    color: var(--C);
+    font-size: 1em;
+}
+
+#search {
+    width: 100%;
+    max-width: 250px;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 15px;
+    border: 2px solid var(--C);
+    font-size: 1rem;
+    table-layout: fixed;
+
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid var(--C);
+    border-right: 1px solid var(--C);
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+th {
+    background-color: var(--C);
+    color: var(--Bg);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+    background-color:var(--Bg);
+}
+
+
+.sortable {
+    cursor: pointer;
+}
+
+.sortable:hover {
+    background-color: var(--Ts);
+}
+
+#pagination {
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+#prevPage, #nextPage {
+    padding: 6px 12px;
+    background-color: var(--Bg);
+    color: var(--C);
+    border: 2px solid var(--C);
+    font-family: 'VT323', monospace;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#prevPage:hover, #nextPage:hover {
+    background-color: var(--C);
+    color: var(--Bg);
+}
+
+#pageInfo {
+    margin: 0 15px;
+    margin-top: 8px;
+}
+
+
+::selection {
+  background-color: var(--Ts);
+  color: var(--Bg);
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+    width: 15px;
+    height: 15px;
+}
+
+::-webkit-scrollbar-track { 
+    background: var(--C4);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--Ts);
+    border: var(--C4) 3px solid;
+    border-radius: 6px;
+}
+
+#icon { width: 50px; }
+#name { width: 150px; }
+#fullName { width: 250px; }
+#powerStats { width: calc(80px * 6); text-align: center;}
+#race { width: 150px; }
+#gender { width: 150px; }
+#height { width: 250px; }
+#weight { width: 250px; }
+#placeOfBirth { width: 180px; }
+#alignment { width: 100px; }
+
+
+
+input:focus{
+  outline: none;
+}
